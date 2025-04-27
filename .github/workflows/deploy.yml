@@ -3,12 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Se despliega al hacer push en la rama main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,22 +15,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '14'  # O la versión que estés usando
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@users.noreply.github.com"
+      - name: Build the project
+        run: npm run build  # Asegúrate de que esto construya los archivos en la carpeta adecuada (ej. /dist)
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main
-          folder: dist
-          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main  # Esto indica que se hace deploy a la rama main
+          folder: dist  # Cambia esto a la carpeta que contiene tus archivos estáticos
+          token: ${{ secrets.GITHUB_TOKEN }}  # Usa el token de GitHub para autorizar el deploy
