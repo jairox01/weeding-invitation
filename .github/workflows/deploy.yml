@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Se despliega al hacer push en la rama main
+      - main  # Despliegue al hacer push en la rama main
 
 jobs:
   deploy:
@@ -21,11 +21,11 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build  # Asegúrate de que esto construya los archivos en la carpeta adecuada (ej. /dist)
+        run: npm run build  # Asegúrate de que esto construya los archivos en la carpeta dist (o build)
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages   # Esto indica que se hace deploy a la rama main
-          folder: dist  # Cambia esto a la carpeta que contiene tus archivos estáticos
-          token: ${{ secrets.GITHUB_TOKEN }}  # Usa el token de GitHub para autorizar el deploy
+          branch: gh-pages  # Cambia esto a la rama gh-pages para el deploy
+          folder: dist      # Asegúrate de que esta carpeta sea la correcta (dist o build)
+          token: ${{ secrets.GITHUB_TOKEN }}  # Usa el token para autorizar el deploy
