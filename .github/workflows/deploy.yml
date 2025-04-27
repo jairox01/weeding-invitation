@@ -26,6 +26,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main  # Esto indica que se hace deploy a la rama main
+          branch: gh-pages   # Esto indica que se hace deploy a la rama main
           folder: dist  # Cambia esto a la carpeta que contiene tus archivos estáticos
           token: ${{ secrets.GITHUB_TOKEN }}  # Usa el token de GitHub para autorizar el deploy
