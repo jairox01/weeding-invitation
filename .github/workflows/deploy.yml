@@ -3,35 +3,24 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # o tu rama principal
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Check out the repository
-      uses: actions/checkout@v2
-
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
-
-    - name: Install pnpm
-      run: npm install -g pnpm
+    - name: Checkout repo
+      uses: actions/checkout@v3
 
     - name: Install dependencies
-      run: pnpm install
+      run: npm install
 
-    - name: Build the project
-      run: pnpm build
+    - name: Build project
+      run: npm run build
 
-    - name: List directory after build
-      run: ls -R ./dist && ls -la
-
-    - name: Deploy
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        publish_dir: dist
-        exclude_assets: '.*'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
