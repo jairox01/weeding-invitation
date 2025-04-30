@@ -1,8 +1,9 @@
 <template>
   <HeaderComponent />
-  <MasonryComponent />
   <DateComponent />
   <ItineraryComponent />
+  <MasonryComponent />
+  <LocationComponent />
 </template>
 
 <script>
@@ -10,6 +11,7 @@ import HeaderComponent from './components/HeaderComponent.vue'
 import MasonryComponent from './components/MasonryComponent.vue'
 import DateComponent from './components/DateComponent.vue'
 import ItineraryComponent from './components/ItineraryComponent.vue'
+import LocationComponent from './components/LocationComponent.vue'
 import './assets/styles/main.scss'
 
 export default {
@@ -18,7 +20,8 @@ export default {
     HeaderComponent,
     MasonryComponent,
     DateComponent,
-    ItineraryComponent
+    ItineraryComponent,
+    LocationComponent
   }
 }
 </script>

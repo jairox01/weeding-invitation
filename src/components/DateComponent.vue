@@ -1,21 +1,20 @@
 <template>
     <div class="container">
         <div class="weeding-date">
-            <h3>NUESTRA FECHA</h3>
+            <h4>¡NUESTRA BODA!</h4>
+            <p>Nos llena de alegría compartir nuestro amor cos ustedes. 
+                Los invitamos a celebrar el día más especial de nuestras vidas.</p>
             <div class="date-container">
                 <div class="day-name">
-                    Viernes
+                    <h5>Junio</h5>
                 </div>
                 <div class="date">
-                    <span>20</span>
-                    <span>06</span>
+                    <span>Viernes</span>
+                    <span class="day">20</span>
                     <span>2025</span>
                 </div>
             </div>
-        </div>
-        <div class="countdown">
-            <figure>
-                <img src="../assets/img/countdown-bg.png" alt="">
+            <div class="countdown">
                 <div class="counter">
                     <div class="days">
                         <span>{{ countdown.days }} </span>
@@ -34,7 +33,7 @@
                         <span class="name">Segundos</span>
                     </div>
                 </div>
-            </figure>
+            </div>
         </div>
     </div>
 </template>

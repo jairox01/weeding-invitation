@@ -6,7 +6,6 @@ html, body {
 }
 
 #app {
-    padding-top: 32px;
     background-color: $white;
 
     h3 {
@@ -27,17 +26,21 @@ html, body {
 }
 
 .header {
-    text-align: center;
-    font-family: $font-family-aboreto;
-    padding: 16px 0;
-    margin: 0 20px;
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
+    position: relative;
+    line-height: 0;
 
     h1 {
         font-size: 32px;
         font-weight: 400;
         color: $olive-green;
+        text-align: center;
+        font-family: $font-family-aboreto;
+        padding: 16px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        line-height: 32px;
 
         span {
             font-weight: 400;
@@ -50,7 +53,6 @@ html, body {
 .masonry {
     display: flex;
     gap: 16px;
-    padding: 24px 5px 16px 0;
     height: 500px;
 
     .column {
@@ -118,97 +120,94 @@ html, body {
 
 .weeding-date {
     text-align: center;
-    padding: 24px 0;
+    color: $white;
+    padding: 16px 20px 32px 20px;
+    font-family: $font-family-arsenal;
+    background-color: $forest-green-dark;
 
-    .date-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 14px;
+    h4 {
+        font-size: 22px;
+        font-weight: 400;
+        color: $white;
+        line-height: 22px;
     }
 
-    .day-name {
+    p {
         font-size: 14px;
-        font-weight: 400;
         line-height: 14px;
-        color: $olive-green;
-        font-family: $font-family-arsenal;
+        font-weight: 400;
+        padding: 16px 0;
     }
 
-    .date {
-        font-size: 40px;
-        color: $olive-green;
-        font-weight: 400;
-        font-family: $font-family-aboreto;
-        position: relative;
+    .date-container  {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+        border-bottom: 1px dashed $white;
 
-        span {
-            margin-right: 20px;
+        h5 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
 
-            &:last-child {
-                margin-right: 0;
+        .date {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0 1rem;
+            align-items: center;
 
-                &:after {
-                    display: none;
+            span {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                border-top: 1px solid $white;
+                border-bottom: 1px solid $white;
+                padding: 8px 0;
+
+                &.day {
+                    font-size: 40px;
+                    line-height: 40px;
+                    font-weight: 400;
+                    border: none;
+                    padding: 0;
                 }
             }
+        }
+    }
 
-            &:after {
-                display: inline-block;
-                content: "";
-                position: absolute;
-                border: 3px solid $olive-green;
-                border-radius: 50%;
-                top: 50%;
-                transform: translate(-50%);
-                margin-left: 10px;
+    .countdown {
+        color: $white;
+        position: relative;
+        margin: 0 20px;
+        font-family: $font-family-arsenal;
+
+        .counter {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 16px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                
+                span {
+                    font-size: 48px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    color: $white;
+
+                    &.name {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 12px;
+                    }
+                }
             }
         }
-    }
-}
-
-.countdown {
-    color: $white;
-    position: relative;
-    padding-bottom: 24px;
-    border-bottom: 1px solid $black;
-    margin: 0 20px;
-
-    figure {
-        position: relative;
-    }
-
-    .counter {
-        display: flex;
-        justify-content: center;
-        top: 60%;
-        left: 50%;
-        transform: translateX(-50%);
-        position: absolute;
-        font-family: $font-family-arsenal;
-
-        .days {
-            margin-right: 10px;
-        }
-
-        div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    span {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 48px;
-    }
-
-    span.name {
-        font-size: 12px;
-        line-height: 12px;
-        font-weight: 400;
-        font-family: $font-family-arsenal;
+    
     }
 }
 
@@ -217,9 +216,7 @@ html, body {
     margin: 0 20px;
 
     .itinerary-container {
-        margin: 10px 0 24px 0;
-        border-bottom: 1px dashed;
-        padding-bottom: 24px;
+        margin-top: 10px;
     }
 
     .itinerary-item {
@@ -268,45 +265,46 @@ html, body {
             padding: 25px 0;
         }
     }
+}
 
-    .location {
-        text-align: center;
-        font-family: $font-family-arsenal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 14px;
-        padding-bottom: 24px;
-        color: $black;
-        border-bottom: 1px solid $black;
 
-        .location-container {
-            padding: 12px 0;
+.location {
+    text-align: center;
+    font-family: $font-family-arsenal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 25px 0;
+    color: $black;
+    border-bottom: 1px solid $black;
 
-            p{
-                &:first-child {
-                    margin-bottom: 12px;
-                }
+    .location-container {
+        padding: 12px 0;
+
+        p{
+            &:first-child {
+                margin-bottom: 12px;
             }
         }
+    }
 
-        .links {
+    .links {
+        display: flex;
+        justify-content: space-around;
+
+        a{
+            color: $blue-link;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
             display: flex;
-            justify-content: space-around;
+            align-items: center;
+            text-decoration: underline;
+        }
 
-            a{
-                color: $blue-link;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 14px;
-                display: flex;
-                align-items: center;
-                text-decoration: underline;
-            }
-
-            img {
-                width: 30px;
-                margin-right: 5px;
-            }
+        img {
+            width: 30px;
+            margin-right: 5px;
         }
     }
 }
