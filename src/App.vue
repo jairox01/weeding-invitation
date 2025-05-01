@@ -4,6 +4,8 @@
   <ItineraryComponent />
   <MasonryComponent />
   <LocationComponent />
+  <DressCodeComponent />
+  <FooterComponent />
 </template>
 
 <script>
@@ -12,6 +14,8 @@ import MasonryComponent from './components/MasonryComponent.vue'
 import DateComponent from './components/DateComponent.vue'
 import ItineraryComponent from './components/ItineraryComponent.vue'
 import LocationComponent from './components/LocationComponent.vue'
+import DressCodeComponent from './components/DressCodeComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 import './assets/styles/main.scss'
 
 export default {
@@ -21,7 +25,9 @@ export default {
     MasonryComponent,
     DateComponent,
     ItineraryComponent,
-    LocationComponent
+    LocationComponent,
+    DressCodeComponent,
+    FooterComponent
   }
 }
 </script>
