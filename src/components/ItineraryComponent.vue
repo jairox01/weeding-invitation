@@ -30,7 +30,7 @@
             </div>
             <div class="itinerary-item">
                 <div class="item text-right">
-                    <h4>4:00 pm.</h4>
+                    <h4>3:45 pm.</h4>
                     <p>Inicio de ceremonia</p>
                 </div>
                 <div class="separator"></div>

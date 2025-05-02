@@ -1,7 +1,7 @@
 <template>
     <div class="dress-code">
         <div class="container">
-            <h3>ITINERARIO</h3>
+            <h3>Código de vestuario</h3>
             <div class="dress-columns">
                 <div class="dress--column">
                     <picture>
