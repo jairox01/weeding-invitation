@@ -17,15 +17,15 @@
             <div class="countdown">
                 <div class="counter">
                     <div class="days">
-                        <span>{{ countdown.days }} </span>
+                        <span>{{ countdown.days }}<span>|</span></span>
                         <span class="name">Días</span>
                     </div>
                     <div class="hours">
-                        <span>{{ countdown.hours }}:</span>
+                        <span>{{ countdown.hours }}<span>:</span></span>
                         <span class="name">Horas</span>
                     </div>
                     <div class="minutes">
-                        <span>{{ countdown.minutes }}:</span>
+                        <span>{{ countdown.minutes }}<span>:</span></span>
                         <span class="name">Minutos</span>
                     </div>
                     <div class="seconds">

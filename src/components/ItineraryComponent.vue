@@ -1,5 +1,10 @@
 <template>
     <div class="itinerary">
+        <div class="decoration">
+            <picture>
+                <img src="../assets/img/icons/decoration-right.png" alt="">
+            </picture>
+        </div>
         <h3>ITINERARIO</h3>
         <div class="itinerary-container">
             <div class="itinerary-item">
@@ -43,6 +48,11 @@
                     <p>Inicio de recepción</p>
                 </div>
             </div>
+        </div>
+        <div class="decoration last">
+            <picture>
+                <img src="../assets/img/icons/decoration-left-2.png" alt="">
+            </picture>
         </div>
     </div>
 </template>

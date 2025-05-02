@@ -15,6 +15,11 @@
                 <span>Ver ruta en Waze</span>
             </a>
         </div>
+        <div class="decoration">
+            <picture>
+                <img src="../assets/img/icons/flower-left.png" alt="">
+            </picture>
+        </div>
     </div>
 </template>
 

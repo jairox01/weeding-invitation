@@ -22,6 +22,11 @@
         <div class="container">
             <h4>Colores reservados</h4>
             <div class="color-columns">
+                <div class="decoration">
+                    <picture>
+                        <img src="../assets/img/icons/flower-right.png" alt="">
+                    </picture>
+                </div>
                 <div class="color--column">
                     <div class="bg-white circle"></div>
                     <h5>Blanco</h5>
