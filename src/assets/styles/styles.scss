@@ -408,11 +408,12 @@ html, body {
                 color: $olive-green;
                 font-size: 14px;
                 font-weight: 700;
+                padding: 0;
 
             }
             p {
                 color: $black;
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: 400;
             }
         }
@@ -487,6 +488,11 @@ footer {
 
     .quote {
         border: none;
+
+        a {
+            text-decoration: underline;
+            color: $white;
+        }
     }
 
     .confirmation {

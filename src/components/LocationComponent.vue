@@ -1,6 +1,6 @@
 <template>
     <div class="location">
-        <h3>INFORMACIÓN CEREMONIA & RECEPCIÓN</h3>
+        <h3>CEREMONIA & RECEPCIÓN</h3>
         <div class="location-container">
             <p>Lugar: <b>Hacienda Villa Sara</b></p>
             <p>Dirección: Calle 246 # 7 - 17</p>

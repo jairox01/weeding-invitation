@@ -2,7 +2,7 @@
     <div class="container">
         <div class="weeding-date">
             <h4>¡NUESTRA BODA!</h4>
-            <p>Nos llena de alegría compartir nuestro amor cos ustedes. 
+            <p>Nos llena de alegría compartir nuestro amor con ustedes. 
                 Los invitamos a celebrar el día más especial de nuestras vidas.</p>
             <div class="date-container">
                 <div class="day-name">
